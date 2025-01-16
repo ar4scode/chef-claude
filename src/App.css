@@ -23,3 +23,39 @@ header h1 {
   font-weight: normal;
   padding-left: 0.3rem;
 }
+
+form {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+form input {
+  width: 30em;
+  padding: 0.5rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: .2rem;
+  margin-right: 0.5rem;
+}
+
+form button {
+  padding: 0.5rem 2rem;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: .2rem;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+form button:hover {
+  transform: scale(1.04);
+}
+
+.input-error {
+  text-align: center;
+  margin-top: 0.3rem;
+  color: #f77676;
+}
