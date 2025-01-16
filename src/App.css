@@ -4,3 +4,22 @@
   box-sizing: border-box;
   font-family: Arial;
 }
+
+header {
+  display: flex;
+  border: 1px solid #ddd;
+  justify-content: center;
+  align-items: center;
+  margin: 0.3rem .3rem 0 .3rem;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+header img {
+  width: 4rem;
+}
+
+header h1 {
+  font-weight: normal;
+  padding-left: 0.3rem;
+}
