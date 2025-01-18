@@ -36,7 +36,7 @@ form input {
   padding: 0.5rem;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: .2rem;
+  border-radius: .5rem;
   margin-right: 0.5rem;
 }
 
@@ -45,7 +45,7 @@ form button {
   border: none;
   background-color: #000;
   color: #fff;
-  border-radius: .2rem;
+  border-radius: .5rem;
   cursor: pointer;
   transition: all .3s;
 }
@@ -56,6 +56,23 @@ form button:hover {
 
 .input-error {
   text-align: center;
-  margin-top: 0.3rem;
+  margin-top: 0.5rem;
   color: #f77676;
+}
+
+.container {
+  /* margin-inline:auto; */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 3rem 2rem;
+}
+
+.container ul {
+  margin-top: 1.5rem;
+}
+
+.container ul li {
+  margin: 1.5rem 2.5rem;
+  color: #666;
 }
