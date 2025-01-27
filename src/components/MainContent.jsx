@@ -1,10 +1,12 @@
 import { useFormik } from "formik";
 import { useState } from "react";
 import * as Yup from "yup";
+import SuggestedRecipe from "./SuggestedRecipe";
 
 export const MainContent = () => {
   // const retrievedIngredient = JSON.parse(localStorage.getItem("ingredients"))
   const [ingredients, setIngredients] = useState([]);
+  const [recipeShown, setRecipeShown] = useState(false)
 
   const formik = useFormik({
     initialValues: {
@@ -22,6 +24,10 @@ export const MainContent = () => {
   // useEffect(() => {
   //   localStorage.setItem("ingredients", JSON.stringify(ingredients))
   // }, [ingredients])
+
+  const handleClick = () => {
+    setRecipeShown(prevRecipeShown => !prevRecipeShown)
+  }
 
   return (
     <main>
@@ -54,15 +60,20 @@ export const MainContent = () => {
                 <li key={index}>{ingredient}</li>
               ))}
             </ul>
-
-            <div className="get-recipe-container">
-              <div>
-                <h2>Ready for a recipe? </h2>
-                <p>Generate a recipe from your list of ingredients</p>
+            {ingredients.length > 3 && 
+              <div className="get-recipe-container">
+                <div>
+                  <h2>Ready for a recipe? </h2>
+                  <p>Generate a recipe from your list of ingredients</p>
+                </div>
+                <button onClick={handleClick}>Get a recipe</button>
               </div>
-              <button>Get a recipe</button>
-            </div>
+            } 
           </>
+        }
+
+        {recipeShown && 
+          <SuggestedRecipe />
         }
 
       </div>
