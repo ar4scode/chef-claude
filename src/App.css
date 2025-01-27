@@ -82,15 +82,12 @@ form button:hover {
   justify-content: space-evenly;
   gap: 4rem;
   align-items: center;
-  margin-top: 8rem;
+  margin: 4rem 4rem;
   background-color: #f3d8d8;
   border-radius: .5rem;
   padding: 1rem 2rem;
 }
 
-.get-recipe-container div {
-  margin-left: -5rem;
-}
 
 .get-recipe-container div h2 {
   margin-bottom: 0.5rem;
