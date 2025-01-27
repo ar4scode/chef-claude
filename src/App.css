@@ -76,3 +76,43 @@ form button:hover {
   margin: 1.5rem 2.5rem;
   color: #666;
 }
+
+.get-recipe-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 8rem;
+  background-color: #f3d8d8;
+  border-radius: .5rem;
+  padding: 1rem 2rem;
+}
+
+.get-recipe-container div {
+  margin-left: -5rem;
+}
+
+.get-recipe-container div h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.get-recipe-container div p {
+  color: #666;
+  font-size: .9rem;
+}
+
+.get-recipe-container button {
+  padding: .8rem 2rem;
+  border-radius: .5rem;
+  border: none;
+  color: #fff;
+  background-color: #e4662b;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.get-recipe-container button:hover {
+  transform: scale(1.1);
+}

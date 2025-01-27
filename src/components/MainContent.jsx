@@ -3,6 +3,7 @@ import { useState } from "react";
 import * as Yup from "yup";
 
 export const MainContent = () => {
+  // const retrievedIngredient = JSON.parse(localStorage.getItem("ingredients"))
   const [ingredients, setIngredients] = useState([]);
 
   const formik = useFormik({
@@ -17,6 +18,10 @@ export const MainContent = () => {
       resetForm(); // Clear the input field
     },
   });
+
+  // useEffect(() => {
+  //   localStorage.setItem("ingredients", JSON.stringify(ingredients))
+  // }, [ingredients])
 
   return (
     <main>
@@ -41,11 +46,25 @@ export const MainContent = () => {
 
       <div className="container">
         <h1>Ingredient on hand:</h1>
-        <ul>
-          {ingredients.map((ingredient, index) => (
-            <li key={index}>{ingredient}</li>
-          ))}
-        </ul>
+        {/* avoid rendering when we don't have any ingredients */}
+        {ingredients.length > 0 &&
+          <>
+            <ul>
+              {ingredients.map((ingredient, index) => (
+                <li key={index}>{ingredient}</li>
+              ))}
+            </ul>
+
+            <div className="get-recipe-container">
+              <div>
+                <h2>Ready for a recipe? </h2>
+                <p>Generate a recipe from your list of ingredients</p>
+              </div>
+              <button>Get a recipe</button>
+            </div>
+          </>
+        }
+
       </div>
     </main>
   );
